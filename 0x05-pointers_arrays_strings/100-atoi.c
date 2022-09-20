@@ -1,5 +1,6 @@
-#include "holberton.h"
-
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 /**
  * _atoi - converts a string to an integer
  * @s: string to convert
