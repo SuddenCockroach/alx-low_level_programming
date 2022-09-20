@@ -1,42 +1,20 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-
+#include "main.h"
 /**
- * main - random password generator for 101-crackme
- *
- * Return: always 0
- */
-int main(void)
+* print_number - Prints a number
+* @n: The number to print
+*
+*/
+void print_number(int n)
 {
-	int i, j, k, s;
-	char c[] = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char p[58];
-
-	srand(time(NULL));
-	while (s != 2772)
-	{
-		i = k = s = 0;
-		while ((2772 - 122) > s)
-		{
-			j = rand() % 62;
-			p[i] = c[j];
-			s += c[j];
-			i++;
-		}
-		while (c[k])
-		{
-			if (c[k] == (2772 - s))
-			{
-				p[i] = c[k];
-				s += c[k];
-				i++;
-				break;
-			}
-			k++;
-		}
-	}
-	p[i] = '\0';
-	printf("%s", p);
-	return (0);
+unsigned int num = n;
+if (n < 0)
+{
+_putchar('-');
+num = -num;
+}
+if (num > 9)
+{
+print_number(num / 10);
+}
+_putchar(num % 10 + '0');
 }
