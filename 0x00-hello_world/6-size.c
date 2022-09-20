@@ -5,7 +5,7 @@
 *
 * description: print out size
 *
-* Return 0
+* Return: return value of main
 */
 int main(void)
 {
