@@ -12,7 +12,7 @@ while (len_gth > i)
 {
 swap_char(s + len_gth, s + i);
 i++;
-length--;
+len_gth--;
 }
 }
 
