@@ -1,2 +1,2 @@
 #!/bin/bash
-CFILE=3-main.c ;
+CFILE=3-main.c 
