@@ -1,20 +1,28 @@
-#include<stdio.h>
-#include <stdlib.h>
+#include "holberton.h"
 
-int main() {
-    // Converting a numeric string
-    char str[10] = "122";
-    int x = atoi(str);
-    printf("Converting '122': %d\n", x);
+/**
+ * _atoi - converts a string to an integer
+ * @s: string to convert
+ *
+ * Return: value of integer
+ */
+int _atoi(char *s)
+{
+	int i, j, n, m;
 
-    // Converting an alphanumeric string
-    char str2[10] = "Hello!";
-    x = atoi(str2);
-    printf("Converting 'Hello!': %d\n", x);
-
-    // Converting a partial string
-    char str3[10] = "99Hello!";
-    x = atoi(str3);
-    printf("Converting '99Hello!': %d\n", x);
-    return 0;
+	i = n = 0;
+	m = 1;
+	while ((*(s + i) < '0' || *(s + i) > '9') && (*(s + i) != '\0'))
+	{
+		if (*(s + i) == '-')
+			m *= -1;
+		i++;
+	}
+	j = i;
+	while ((*(s + j) >= '0') && (*(s + j) <= '9'))
+	{
+		n = n * 10 + m * (*(s + j) - '0');
+		j++;
+	}
+	return (n);
 }
